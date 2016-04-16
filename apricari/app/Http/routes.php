@@ -14,3 +14,20 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
+// Route::get('/products', function () {
+//     return view('products/main');
+// });
+
+Route::get('products', 'ProductController@main');
+
+Route::get('cards', 'CardsController@index');
+Route::get('cards/{card}', 'CardsController@show');
