@@ -30,7 +30,7 @@
 <body>
 	<div class="container">
 		<div class="wrapper">
-			<nav class="navbar navbar-default" style="display: none;">
+			<nav class="navbar navbar-default navbar-fixed-top" style="">
 			  <div class="container-fluid">
 			    <!-- Brand and toggle get grouped for better mobile display -->
 			    <div class="navbar-header">
@@ -40,16 +40,18 @@
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
 			      </button>
+			      <!-- <a href="#">Apricari</a> -->
 			    </div>
-			    <div class="col-sm-12">
-			    	<div class="col-sm-5">
-			    		<h4 style="text-align: center;">Products</h4>
-			    	</div>
-			    	<div class="col-sm-2"><h1 style="text-align: center;">APRICARI</h1></div>
-			    	<div class="col-sm-5">
-			    		<h4 style="text-align: center;">About Us</h4>
-			    	</div>
-			    </div>
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				    <div class="col-sm-12">
+				    	<div class="col-sm-5">
+				    		<h4 style="text-align: center;"><a href="#">Products</a></h4>
+				    	</div>
+				    	<div class="col-sm-2"><h1 style="text-align: center;"><a href="./">APRICARI</a></h1></div>
+				    	<div class="col-sm-5">
+				    		<h4 style="text-align: center;"><a href="./about">About Us</a></h4>
+				    	</div>
+				    </div>
 			  </div><!-- /.container-fluid -->
 			</nav>
 			@yield('content')
@@ -60,7 +62,25 @@
 
 
 	@yield('footer')
-
+	<script src="../vendor/auto-hide/dist/jquery.bootstrap-autohidingnavbar.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".navbar-fixed-top").autoHidingNavbar();
+			$("body").click(function(){
+				alert($(window).scrollTop());
+			});
+		});
+		// $(window).bind('scroll', function () {
+		//     if ($(window).scrollTop() > 50) {
+		//     	//$('.navbar').css("display","inline");
+		//         // $('.navbar').addClass('fixed');
+		//         $('.navbar').addClass('navbar-fixed-top');
+		//     } else {
+		//         // $('.navbar').removeClass('fixed');
+		//     }
+		// });
+		
+	</script>
 </body>
 
 </html>

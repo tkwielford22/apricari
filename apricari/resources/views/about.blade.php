@@ -3,7 +3,13 @@
 
 @section('content')
 
-    <h1>The About Page</h1>
+    <div class="container">
+    	<div class="wrapper">
+    		<h1>About Me</h1>
+    		<h4>Owner, Apricari</h4>
+    		<p></p>
+    	</div>
+    </div>
 
 @stop
 
